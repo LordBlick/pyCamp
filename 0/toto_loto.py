@@ -17,7 +17,7 @@ def tm_dc(func):
         btime = pc()
         ret = func(*args, **kwargs)
         etime = pc()
-        print(f"Czas symulacji: {round(etime - btime, 6)} sekund(y)")
+        print(f"Czas symulacji: {round(etime - btime, 3)} sekund(y)")
         return ret
     return inner
 
@@ -72,10 +72,10 @@ def main():
     print("Wylosowanie dokładnie założonych liczb:"
         f" {', '.join(str(d) for d in MY_BET)} zajęło {str_int(score[6])} prób.")
     print("Przy założeniu 3 PLN za zakład, całkowicie wydane pieniądze"
-        f" na zakłady: {str_int(score[6]*3)} PLN")
+        f": {str_int(score[6]*3)} PLN")
     print(f"Przy 1 zakładzie na tydzień, wygrana zajmie {weeks_to_years(score[6])}")
     for test in range(3, 6):
-        print(f"W ich trakcie wypadło {score[test]:d} razy {test:d}")
+        print(f"W trakcie całej operacji wypadło {score[test]:d} razy {test:d}")
 
 if __name__=="__main__":
     main()
