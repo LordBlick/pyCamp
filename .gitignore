@@ -128,4 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# pdf documentation
 *.pdf
+
+# Visual Studio Code configuration folder
+.vscode/
