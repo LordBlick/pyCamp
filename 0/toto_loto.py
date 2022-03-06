@@ -9,7 +9,6 @@ from random import randint as rint
 from time import perf_counter as pc
 
 MY_BET = 7, 12, 15, 27, 32, 41
-
 def tm_dc(func):
     """Time Measurment decorator"""
     def inner(*args, **kwargs):
@@ -24,7 +23,7 @@ def tm_dc(func):
 def lotery_once():
     """Single drawing"""
     drw = set()
-    while len(drw)<7:
+    while len(drw)<6:
         drw.add(rint(1, 49))
     return tuple(sorted(drw))
 
