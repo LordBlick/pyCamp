@@ -133,3 +133,6 @@ dmypy.json
 
 # Visual Studio Code configuration folder
 .vscode/
+
+# Private  txt files
+*_priv.txt
